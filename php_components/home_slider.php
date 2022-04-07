@@ -23,10 +23,7 @@
                         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="livedemo" name="Live Demo" class="btn btn-primary btn-lg" required="required">Live Demo</button>
-                                </div>
-                                <div class="form-group">
-                                    <button type="getnow" name="Get Now" class="btn btn-primary btn-lg" required="required">Get Now</button>
+                                    <button type="getnow" name="Get Now" class="btn btn-primary btn-lg" required="required">¡Aquí!</button>
                                 </div>
                             </form>
                         </div>
@@ -47,10 +44,7 @@
                         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="livedemo" name="purchase" class="btn btn-primary btn-lg" required="required">Live Demo</button>
-                                </div>
-                                <div class="form-group">
-                                    <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Get Now</button>
+                                    <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Leer Más</button>
                                 </div>
                             </form>
                         </div>

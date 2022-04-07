@@ -90,7 +90,7 @@
                             </div>
                         </div><!--/.media -->
                         <br><br>
-                        <p style="color:rgb(77, 74, 74);">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <p style="color:rgb(77, 74, 74);">Mi nombre es Jocelyn Flores López, estoy estudiando en 6to semestre de la ingeniería en sistemas computacionales, me agrada está carrera debido a que no hay un límite de lo que se pueda desarrollar, sin embargo siempre hay que tener una actualización constante de las nuevas tecnologías, lo que más me gusta en estos momentos es saber cómo se desarrollan los procesos para la creación de aplicaciones.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-md-offset-2">
