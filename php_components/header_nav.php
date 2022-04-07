@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <a href="index.php"><img src="../img/favicon.png" alt="Huellitas Aventureras" style="max-height: 3em"></a>
+                    <a href="index.php"><img src="..\img\favicon.png" alt="Huellitas Aventureras" style="max-height: 3em"></a>
                 </div>
             </div>
             <div class="navbar-collapse collapse">
