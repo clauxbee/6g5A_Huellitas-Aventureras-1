@@ -8,8 +8,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="navbar-brand">
-                    <a href="index.php"><img src="..\img\favicon.png" alt="Huellitas Aventureras" style="max-height: 3em"></a>
+                <div class="navbar-brand" style="height: 50px; margin: 15px; padding: 0">
+                    <a href="index.php"><img src="..\img\favicon.png" alt="Huellitas Aventureras" style="height: 100%;"></a>
                 </div>
             </div>
             <div class="navbar-collapse collapse">

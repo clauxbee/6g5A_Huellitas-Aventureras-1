@@ -40,7 +40,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	color:#aaa;	
+	color:#aaa;
 	}
 
 .btn {
@@ -55,10 +55,10 @@ a:hover {
 .btn:hover {
 	background-color: #85c2ff88;
 	border-color:#f2f2f2;
-	color:#272727;	
+	color:#272727;
 }
 
-	
+
 /*===========================
   Menu and Navigation
 ============================ */
@@ -71,11 +71,11 @@ a:hover {
 }
 
 .navbar-brand h1 {
-	margin-top:9px;
-	padding-top:5px;
-	float: left;	
-	font-size: 25px;	
-	color:#fff;	
+    margin-top: 9px;
+    padding-top: 5px;
+	float: left;
+	font-size: 25px;
+	color:#fff;
 	text-transform:uppercase;
 	font-weight:600;
 }
@@ -84,7 +84,7 @@ a:hover {
 	font-size:12px;
 	float:right;
 	text-transform:uppercase;
-	font-weight:600;	
+	font-weight:600;
 }
 
 .navbar-collapse {
@@ -101,7 +101,7 @@ a:hover {
 }
 
 .menu ul.nav-tabs li {
-	color:#fff;	
+	color:#fff;
 }
 
 .nav-tabs {
@@ -112,7 +112,7 @@ a:hover {
 	margin-bottom: 0;
 }
 
-.nav-tabs > li > a {	
+.nav-tabs > li > a {
 	border-radius:0;
 	color:rgb(255, 255, 255);
 	padding:30px;
@@ -120,8 +120,8 @@ a:hover {
 
 .nav-tabs > li > a:hover {
 	color:#272727;
-	background:#fff;	
-} 
+	background:#fff;
+}
 
 .nav-tabs > li a.active {
 	color: #555;
@@ -140,7 +140,7 @@ a:hover {
   slider
 ============================ */
 .slider {
-	position: relative;	
+	position: relative;
 	margin-top:-20px;
 }
 
@@ -175,7 +175,7 @@ a:hover {
 	border: 1px solid #65AAF0;
 }
 
-#carousel-slider 
+#carousel-slider
 .carousel-control {
 	width:inherit;
 }
@@ -261,7 +261,7 @@ a:hover {
 }
 
 .form-inline {
-	margin-top:50px;	
+	margin-top:50px;
 }
 
 /*===========================
@@ -283,7 +283,7 @@ a:hover {
 	margin-top:20px;
 	margin-bottom:80px;
 	color:#aaa;
-} 
+}
 
 .btn-gamp a {
   float: right;
@@ -369,9 +369,9 @@ a:hover {
    color: #FFFFFF;
 }
 
-.joomla-skill, 
-.html-skill, 
-.css-skill, 
+.joomla-skill,
+.html-skill,
+.css-skill,
 .wp-skill {
   position: absolute;
   height: 100%;
@@ -390,7 +390,7 @@ a:hover {
   background: -o-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(242,242,242,1) 28%,rgba(45,125,164,1) 28%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(242,242,242,1) 28%,rgba(45,125,164,1) 28%); /* IE10+ */
   background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(242,242,242,1) 28%,rgba(45,125,164,1) 28%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#2d7da4',GradientType=0 ); /* IE6-9 */    
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#2d7da4',GradientType=0 ); /* IE6-9 */
 }
 
 .html-skill {
@@ -452,13 +452,13 @@ a:hover {
   font-weight: 300;
 }
 
-.single-profile-top, 
+.single-profile-top,
 .single-profile-bottom {
   font-weight: 400;
   line-height: 24px;
 }
 
-.single-profile-top, 
+.single-profile-top,
 .single-profile-bottom  {
   border: 1px solid #ddd;
   padding: 15px;
@@ -507,12 +507,12 @@ ul.social_icons li  a i{
   opacity:.8;
 }
 
-.team .social_icons .fa-facebook:hover, 
-.team .social_icons .fa-twitter:hover, 
+.team .social_icons .fa-facebook:hover,
+.team .social_icons .fa-twitter:hover,
 .team .social_icons .fa-google-plus:hover {
   transform: rotate(360deg);
   -ms-transform:rotate(360deg);
-  -webkit-transform:rotate(360deg); 
+  -webkit-transform:rotate(360deg);
   transition-duration:2s;
   transition-property: all;
   transition-timing-function: ease;
@@ -634,7 +634,7 @@ ul.social_icons li  a i{
   margin-left: -32px;
 }
 
-.team .single-profile-top:before, 
+.team .single-profile-top:before,
 .team .single-profile-top:after {
   content: "";
   position: absolute;
@@ -733,7 +733,7 @@ ul.social_icons li  a i{
 }
 
 .gallery figure {
-	position: relative;	
+	position: relative;
 	margin-top:30px;
 	margin-bottom:30px;
 	background: #272727;
@@ -900,11 +900,11 @@ figure.effect-marley:hover p {
 	margin-bottom:30px;
 }
 
-.contact-page p {	
+.contact-page p {
 	margin-bottom:30px;
 }
 
-.contact-page .contact-form 
+.contact-page .contact-form
 .form-group label {
   color: #4E4E4E;
   font-size: 16px;
@@ -976,7 +976,7 @@ footer .btn-gamp input {
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	color: #272727;	
+	color: #272727;
 	width: 180px;
 	height: 60px;
 	text-align: center;
@@ -1007,7 +1007,7 @@ ul.sidebar-gallery {
   list-style: none;
   padding: 0;
   margin: 0;
- 
+
 }
 
 .sidebar-gallery li {
@@ -1022,7 +1022,7 @@ ul.sidebar-gallery {
 
 ul.social-network {
 	list-style:none;
-	margin-top:20px;	
+	margin-top:20px;
 	padding:10px;
 	transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1036,13 +1036,13 @@ ul.social-network {
 
 ul.social-network li {
 	display:inline;
-	margin: 0 50px;	
-	font-size:25px;	
+	margin: 0 50px;
+	font-size:25px;
 	margin-left:-10px;
 }
 
 ul.social-network li a {
-	color:#d0d0d0;	
+	color:#d0d0d0;
 }
 .social-network li:hover .fa-twitter {
   color: #00abf0;
@@ -1054,19 +1054,19 @@ ul.social-network li a {
   color: #eb8984;
 }
 .social-network li:hover .fa-pinterest {
-  color: #c9171e; 
+  color: #c9171e;
 }
 .social-network li:hover .fa-linkedin {
-  color: #0077b5; 
+  color: #0077b5;
 }
 .social-network li:hover .fa-youtube-play {
-  color: #C84941; 
+  color: #C84941;
 }
 .social-network li:hover .fa-dribbble {
-  color: #EA4C89 ; 
+  color: #EA4C89 ;
 }
 .social-network li:hover .fa-pinterest-square {
-  color: #EA4B49; 
+  color: #EA4B49;
 }
 
 .copyright {
