@@ -10,7 +10,7 @@
                 <div class="col-sm-3">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="joomla-skill">
-                            <p><em>85%</em></p>
+                            <p><em>98%</em></p>
                             <p>Honestidad</p>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="col-sm-3">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
                         <div class="css-skill">
-                            <p><em>80%</em></p>
+                            <p><em>90%</em></p>
                             <p>Dedicaci&oacute;n</p>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                 <div class="col-sm-3">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
                         <div class="wp-skill">
-                            <p><em>90%</em></p>
+                            <p><em>95%</em></p>
                             <p>Actitud positiva</p>
                         </div>
                     </div>
