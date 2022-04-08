@@ -28,7 +28,7 @@
                 <img src="img/Aniversario.png" alt="" class="img-responsive"/>
                 <figcaption>
                     <h4>Promoción primer año</h4>
-                    <p>Despúes de tener un año con nosotros puedes pedir un paseo totalmente ¡gratuito!, nos importas y agradecemos tu preferencia, por eso queremos regresarte un poco de todo el amor y confianza que nos has dado.</p>
+                    <p>Dedicada a aquellos fans de Huellitas aventureras, al cumplir un año usando nuestros servicios puedes pedir ¡Un paseo gratis!</p>
                 </figcaption>
             </figure>
         </div>
@@ -58,7 +58,7 @@
                 <img src="img/GoldenDog.jpg" alt="" class="img-responsive"/>
                 <figcaption>
                     <h4>Promocion Golden Puppy</h4> 
-                    <p>Para aquellos que quieran algo especial para sus mascotas, brindamos 10 paseos con el 10% de descuento y un colgante metalico dorado con el nombre de tu mascota.</p>
+                    <p>Si quieres darle algo muy especial a tu mascota, brindamos 10 paseos con el 10% de descuento y un colgante metalico dorado con el nombre de tu mascota.</p>
                 </figcaption>
             </figure>
         </div>
