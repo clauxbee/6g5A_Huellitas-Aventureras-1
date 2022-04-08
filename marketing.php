@@ -4,8 +4,8 @@
 <body>
 <?php include_once("php_components/header_nav.php"); ?>
 
-<?php include_once("php_components/blog_bestMonth.php"); ?>
-<?php include_once("php_components/blog_entrances.php"); ?>
+<?php include_once("php_components/blog_bestMonth_mark.php"); ?>
+<?php include_once("php_components/blog_entrances_mark.php"); ?>
 
 <?php include_once("php_components/footer.php"); ?>
 
