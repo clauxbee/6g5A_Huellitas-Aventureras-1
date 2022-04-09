@@ -21,9 +21,9 @@
                             </div>
                         </div>
                         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
-                            <form class="form-inline">
+                            <form class="form-inline" action="formulario.php">
                                 <div class="form-group">
-                                    <button type="getnow" name="Get Now" class="btn btn-primary btn-lg" required="required">¡Aquí!</button>
+                                    <button type="getnow" class="btn btn-primary btn-lg" required="required">¡Aquí!</button>
                                 </div>
                             </form>
                         </div>
@@ -42,9 +42,9 @@
                             </div>
                         </div>
                         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
-                            <form class="form-inline">
+                            <form class="form-inline" action="">
                                 <div class="form-group">
-                                    <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Leer Más</button>
+                                    <button type="getnow" class="btn btn-primary btn-lg" required="required">Leer Más</button>
                                 </div>
                             </form>
                         </div>
@@ -62,12 +62,12 @@
                             </div>
                         </div>
                         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
-                            <form class="form-inline">
+                            <form class="form-inline" action="login.php">
                                 <div class="form-group">
-                                    <button type="livedemo" name="purchase" class="btn btn-primary btn-lg" required="required">Iniciar Sesión</button>
+                                    <button  type="livedemo" class="btn btn-primary btn-lg" required="required">Iniciar Sesión</button>
                                 </div>
                                 <div class="form-group">
-                                    <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Registrarse</button>
+                                    <button type="getnow" class="btn btn-primary btn-lg" required="required">Registrarse</button>
                                 </div>
                             </form>
                         </div>
