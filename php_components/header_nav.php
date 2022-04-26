@@ -23,7 +23,7 @@
                         <li role="presentation"><a href="blog.php">Blog</a></li>
                         <li role="presentation"><a href="marketing.php">Marketing</a></li>
                         <li role="presentation"><a href="#">Cuenta</a></li>
-                        <li role="presentation"><a href="#">Perfil</a></li>
+                        <li role="presentation"><a href="profile.php">Perfil</a></li>
                         <li role="presentation"><a href="login.php">Iniciar Sesión</a></li>
                     </ul>
 
