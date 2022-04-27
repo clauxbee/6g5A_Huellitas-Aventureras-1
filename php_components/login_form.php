@@ -10,8 +10,10 @@
                     <p>Queremos lo mejor para tu peludito, es por ello que en "Huellitas aventureras" nos empeñamos todos los días en hacerlo sentir bien y cuidarlos como si fueran nuestros. Piensa en tu peludito y regalale un paseo con los mejores paseadores de la ciudad, forma parte de nuestra gran familia</p>
                    
                     <div class="btnn">
-                    <button href="register.html" type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Crear una cuenta</button>
-                    </div>
+                   <a href="register.php">
+                    <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Crear una cuenta</button>
+</a>
+                </div>
                     <div class="clear"></div>
                 </div>
             </div>
