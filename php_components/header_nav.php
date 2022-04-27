@@ -14,6 +14,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <div class="menu">
+                 <?php
+				     if (isset($_SESSION["usu"]) && !empty($_SESSION["usu"])){   
+			     ?>
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation"><a href="index.php">Inicio</a></li>
                         <li role="presentation"><a href="servicios.php">Solicitar Servicio</a></li>
@@ -23,6 +26,18 @@
                         <li role="presentation"><a href="profile.php">Perfil</a></li>
                         <li role="presentation"><a href="login.php">Iniciar Sesión</a></li>
                     </ul>
+
+                <?php
+				    } else {
+			    ?>
+                    <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="index.php">Inicio</a></li>
+                        <li role="presentation"><a href="blog.php">Blog</a></li>
+                        <li role="presentation"><a href="login.php">Iniciar Sesión</a></li>
+                    </ul>
+                <?php
+				    }
+			    ?>
                 </div>
             </div>
         </div><!--/.container-->
