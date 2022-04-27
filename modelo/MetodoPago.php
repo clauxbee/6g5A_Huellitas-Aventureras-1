@@ -25,7 +25,7 @@ class MetodoPago{
      function setNumero($psNumero){
         $this->sNumero = $psNumero;
      }
-     function getNumero){
+     function getNumero(){
         return $this->sNumero;
      }
 

@@ -24,7 +24,7 @@ class Mascota{
      function setRaza($psRaza){
         $this->sRaza = $psRaza;
      }
-     function getRaza){
+     function getRaza(){
         return $this->sRaza;
      }
 
