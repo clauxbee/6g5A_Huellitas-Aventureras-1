@@ -24,7 +24,7 @@
                     
                     <br>
                     <div id="loginbox" class="loginbox">
-                        <form action="" method="post" name="login" id="login-form" onsubmit="return validar();">
+                        <form action="../controlador/login_controller.php" method="post" name="login" id="login-form" onsubmit="return validarLogin();">
                             <fieldset class="input">
                                 <p id="login-form-username">
                                     <label for="modlgn_username">Correo</label>

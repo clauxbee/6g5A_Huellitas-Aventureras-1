@@ -25,7 +25,7 @@ class Persona{
      function setEdad($psEdad){
         $this->sEdad = $psEdad;
      }
-     function getEdad){
+     function getEdad(){
         return $this->sEdad;
      }
 
