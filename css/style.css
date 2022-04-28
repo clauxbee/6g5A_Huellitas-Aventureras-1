@@ -44,13 +44,17 @@ a:hover {
 	}
 
 .btn {
-	border-radius:0;
+	border-radius:10px;
 	margin-top:10px;
+ padding: auto;
 	background-color: #65AAF0;
 	text-transform:uppercase;
 	border-color:#fff;
-	font-size:14px;
+	font-size:12px;
 }
+
+
+
 
 .btn:hover {
 	background-color: #85c2ff88;

@@ -7,7 +7,7 @@ class accesoBD {
     function connect() {
         $ret = false;
         try {
-            $this->oConexion = new PDO("mysql:host=localhost;dbname=huellitas_aventureras","root","",  array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
+            $this->oConexion = new PDO("mysql:host=localhost;dbname=huellitas_aventureras","","",  array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"));
             $ret = true;
         } catch (Exception $exception) {
             throw $exception;
