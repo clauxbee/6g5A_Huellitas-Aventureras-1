@@ -17,14 +17,14 @@
             <div class="text-center">
                 <h4>Blog</h4>
                 <ul class="sidebar-gallery">
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 1"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 2"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 3"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 4"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 5"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 6"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 7"/></a></li>
-                    <li><a href="#"><img src="img/gallery1.png" alt="Entrada 8"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog1p.jpg" alt="Entrada 1"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog2p.png" alt="Entrada 2"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog3p.jpg" alt="Entrada 3"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog4p.jpg" alt="Entrada 4"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog5p.jpg" alt="Entrada 5"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog6p.jpg" alt="Entrada 6"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog7p.jpg" alt="Entrada 7"/></a></li>
+                    <li><a href="../blog.php"><img src="img/blog8p.jpg" alt="Entrada 8"/></a></li>
                 </ul>
             </div>
         </div>
@@ -43,9 +43,7 @@
 
         <div class="col-md-4 col-md-offset-4">
             <div class="copyright">
-                &copy; Day 2015 by <a target="_blank" href="http://bootstraptaste.com/"
-                                      title="Free Twitter Bootstrap WordPress Themes and HTML templates">Bootstrap
-                    Themes</a>.All Rights Reserved.
+                    &copy;   2022 Huellitas Aventureras.
             </div>
             <!--
                 All links in the footer should remain intact.
