@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <div class="main">
     <div class="shop_top">
         <div class="container">
@@ -18,23 +15,28 @@ session_start();
                         <h4 style="margin: rigth 30px;"> Mascotas</h4>
                     </div>
                     <div style=" padding:20px; background-color:#f2f2f2; line-height:1;">
-                        <p>
-                            Kiara
-                            <br>
-                            Dona
-                            <br>
-                            Mia
-                            <br>
-                            Kelly
-                        </p>
+                        <form method="get" action="../edit-pet.php">
+                            <input type="hidden" name="petIndex">
+                            <table width="100%">
+                                <?php
+                                $pets = $_SESSION["userPets"];
+                                for ($i = 0; $i < sizeof($_SESSION["userPets"]); $i++) { ?>
+                                    <tr>
+                                    <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPets"][$i][1]; ?> </p></td>
+                                    <td style="text-align: right">
+                                        <button href="inicio.html" type="getnow" name="subscribe"
+                                                class="btn btn-primary btn-lg" required="required" onclick="petIndex.value=<?php echo $_SESSION["userPets"][$i][0]; ?>">Editar
+                                        </button>
+                                    </td>
+                                    </tr>
+                                <?php } ?>
+                            </table>
+                        </form>
                     </div>
                     <div style=" margin-bottom:10px; padding:2px; background-color:#65AAF0; line-height:1;">
                         <a href="add-pet.php">
                             <button type="getnow" name="add-pet" class="btn" required="required">
                                 <p>Add</p></button>
-                        </a>
-                        <a href="edit-pet.php">
-                            <button type="getnow" name="edit-pet" class="btn" required="required"><p>Edit</p></button>
                         </a></div>
                     <div class="clear"></div>
                 </div>
@@ -84,18 +86,18 @@ session_start();
                     <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
                         <br>
                     </div>
-<!--                    <div style="margin-top:25px; padding:5px; background-color:#65AAF0; line-height:1.4;">-->
-<!--                        <h4> Sobre nosotros</h4>-->
-<!--                    </div>-->
-<!--                    <div style=" padding:20px; background-color:#f2f2f2; line-height:1.4;">-->
-<!--                        <p>-->
-<!--                            Somos un grupo de jovenes estudiantes, amantes de los animales unidos con el fin mejorar la-->
-<!--                            calidad de vida de nuestros peluditos.-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                    <div style=" padding:1px; background-color:#65AAF0; line-height:1.4; margin-bottom: 10px;">-->
-<!--                        <br>-->
-<!--                    </div>-->
+                    <!--                    <div style="margin-top:25px; padding:5px; background-color:#65AAF0; line-height:1.4;">-->
+                    <!--                        <h4> Sobre nosotros</h4>-->
+                    <!--                    </div>-->
+                    <!--                    <div style=" padding:20px; background-color:#f2f2f2; line-height:1.4;">-->
+                    <!--                        <p>-->
+                    <!--                            Somos un grupo de jovenes estudiantes, amantes de los animales unidos con el fin mejorar la-->
+                    <!--                            calidad de vida de nuestros peluditos.-->
+                    <!--                        </p>-->
+                    <!--                    </div>-->
+                    <!--                    <div style=" padding:1px; background-color:#65AAF0; line-height:1.4; margin-bottom: 10px;">-->
+                    <!--                        <br>-->
+                    <!--                    </div>-->
                 </fieldset>
                 </form>
             </div>

@@ -1,4 +1,5 @@
 <header id="header">
+    <?php session_start() ?>
     <nav class="navbar navbar-default navbar-static-top" role="banner">
         <div class="container">
             <div class="navbar-header">

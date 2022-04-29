@@ -7,7 +7,49 @@ include_once("Mascota.php");
 class Usuario extends Persona{
    protected $sIdUsuario=0;
    protected $sContraseña="";
-   
+   protected $arrMascotas=array();
+
+    public function getArrMascotas()
+    {
+        return $this->arrMascotas;
+    }
+
+    public function setArrMascotas($userID)
+    {
+        $db = new accesoBD();
+        $pets = array();
+        $query = "";
+        $arrRS = null;
+        $petIndex = 0;
+        $pet = null;
+
+        if ($db->connect()) {
+            $query = "SELECT * FROM mascotas
+                       WHERE mascotas.ID_Usuario = '" . $userID . "'";
+
+            $arrRS = $db->execQuery($query);
+            $db->disconnect();
+
+            if ($arrRS != null) {
+                foreach ($arrRS as $rowPet) {
+                    $pet = new Mascota();
+
+                    $pet->setIdMascota($rowPet[0]);
+                    $pet->setNombre($rowPet[1]);
+                    $pet->setEdad($rowPet[2]);
+                    $pet->setRaza($rowPet[3]);
+                    $pet->setIdUsuario($rowPet[4]);
+
+                    $pets[$petIndex] = array($pet->getIdMascota(), $pet->getNombre(), $pet->getEdad(), $pet->getRaza(), $pet->getIdUsuario());
+
+                    $petIndex++;
+                }
+            }
+        }
+
+        $this->arrMascotas = $pets;
+    }
+
      function setIdUsuario($psIdUsuario){
         $this->sIdUsuario = $psIdUsuario;
      }
@@ -48,6 +90,7 @@ class Usuario extends Persona{
                      $this->sDomicilio = $arrRS[0][5];
                      $this->sCorreo = $arrRS[0][6];
                      $this->sContraseña = $arrRS[0][7];
+                     $this->setArrMascotas($this->sIdUsuario);
 
                      $found = true;
                  }

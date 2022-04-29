@@ -26,6 +26,8 @@ if (isset($_POST["email"]) && !empty($_POST["email"]) &&
             $_SESSION["userAddress"] = $user->getDomicilio();
             $_SESSION["userMail"] = $user->getCorreo();
             $_SESSION["userPassword"] = $user->getContraseña();
+            $user->setArrMascotas($user->getIdUsuario());
+            $_SESSION["userPets"] = $user->getArrMascotas();
         } else
             $error = "Usuario no encontrado";
     } catch (Exception $e){
