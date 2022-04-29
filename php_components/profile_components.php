@@ -1,16 +1,24 @@
 <div class="main">
     <div class="shop_top">
         <div class="container">
+
             <div class="col-md-6">
+
                 <div class="profile_components-page">
                     <br>
+
                     <fieldset class="input">
+
+                    <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
+                          <br>
+                    </div>
                         <img src=img/regIcon.png>
                     </fieldset>
-
-                    <button type="getnow" name="editar_perfil" class="btn btn-primary btn-lg" required="required"><img
-                                src="...img/lapiz.png" height="30" width="50"/></button>
-
+                    
+                    <div style=" padding:1px; background-color:#65AAF0; line-height:2.5;">
+                          <br>
+                    </div>
+                   
                     <div style=" margin-top:25px;  padding:5px; background-color:#65AAF0; line-height:1.4;">
                         <h4 style="margin: rigth 30px;"> Mascotas</h4>
                     </div>
@@ -25,10 +33,13 @@
                             Kelly
                         </p>
                     </div>
-                    <div style=" margin-bottom:10px; padding:5px; background-color:#65AAF0; line-height:1.4;">
-                        <button type="getnow" name="editar_perfil" class="btn btn-primary btn-lg" required="required">
-                            <img src="...img/lapiz.png" height="10" width="20"/></button>
-                    </div>
+
+                    <div style=" margin-bottom:10px; padding:2px; background-color:#65AAF0; line-height:1;">
+                       <a href="add-pet.php"> <button type="getnow" name="add-pet" class="btn" required="required">
+                         <p>Add</p>   </button> </a>
+                        <a href="edit-pet.php">
+                           <button type="getnow" name="edit-pet" class="btn" required="required"><p>Edit</p></button>
+                        </a> </div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -36,6 +47,7 @@
             <div class="container">
 
                 <fieldset class="input">
+                    <br>
                     <div style=" padding: 5px;px; background-color:#65AAF0; line-height:1.4;">
                         <h4> Datos personales</h4>
                     </div>
@@ -58,8 +70,7 @@
                         </p>
                     </div>
                     <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
-                        <button type="getnow" name="editar_perfil" class="btn btn-primary btn-lg" required="required">
-                            <img src="...img/lapiz.png" height="10" width="20"/></button>
+                          <br>
                     </div>
 
                     <div style="margin-top:20px; padding:5px; background-color:#65AAF0; line-height:1.4;">
@@ -75,8 +86,8 @@
                         </p>
                     </div>
                     <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
-                        <button type="getnow" name="editar_perfil" class="btn btn-primary btn-lg" required="required">
-                            <img src="...img/lapiz.png" height="10" width="20"/></button>
+                        
+<br>
                     </div>
 
                     <div style="margin-top:25px; padding:5px; background-color:#65AAF0; line-height:1.4;">
@@ -88,9 +99,8 @@
                             calidad de vida de nuestros peluditos.
                         </p>
                     </div>
-                    <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
-                        <button type="getnow" name="editar_perfil" class="btn btn-primary btn-lg" required="required">
-                            <p>Conoce más</p></button>
+                    <div style=" padding:1px; background-color:#65AAF0; line-height:1.4; margin-bottom: 10px;">
+                        <br>
                     </div>
                 </fieldset>
                 </form>

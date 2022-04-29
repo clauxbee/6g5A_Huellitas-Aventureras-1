@@ -9,26 +9,26 @@
             <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
                 <div class="col-sm-5 col-sm-offset-1">
                 <img src = img/regIcon.png>
-                <p>      Ingresa los siguientes datos</p>
+                <p>Ingresa los siguientes datos</p>
                     <div class="form-group">
-                                <label for="modrgstr_username">Nombre</label>
-                                <input id="modrgstr_username" type="text" name="nombreUser" class="inputbox" size="18" autocomplete="off">
+                    <p>  <label for="modrgstr_username">Nombre</label>
+                               <input id="modrgstr_username" type="text" name="nombreUser" class="inputbox" size="18" autocomplete="off"> </p>
                         </div>
                     <div class="form-group">
-                                 <label for="modrgstr_userage">Edad</label>
+                           <p> <label for="modrgstr_userage">Edad</label>
                                  <input id="modrgstr_userare" type="text" name="ageUser" class="inputbox" size="18" autocomplete="off">
-                         </div>
+                 </p> </div>
                 </div>
                 <div class="col-sm-5">
                     <div class="form-group">
-                        <br>
-                        <label>Dirección </label>
+                        
+                        <label>Dirección </label> <p>
                         <input id="modrgstr_useradress" type="text" name="adressUser" class="inputbox" size="18" autocomplete="off">
-                    </div>
-                    <div class="form-group">
+</p>   </div>
+                    <div class="form-group"> <p>
                             <label for="modrgst_userphone">Número de celular</label>
                             <input id="modrgstr_userphone" type="text" name="phoneUser" class="inputbox" size="18" autocomplete="off">
-                    </div>
+</p>    </div>
                     <div class="form-group">
                         <p>
                                  <label>Género</label>
@@ -37,20 +37,20 @@
                                 <input name="Genero" type="radio" id="Genero" value="Otro"> Otro</input>
                         </p>
                   </div>
-                    <div class="form-group">
+                    <div class="form-group">  <p>
                                 <label for="modrgstr_useremail">Correo</label>
                                 <input id="modrgstr_useremail" type="text" name="email" class="inputbox" size="18" autocomplete="off">
-                   </div>
+</p> </div>
 
-                    <div class="form-group">
+                    <div class="form-group"> <p>
                                      <label for="modrgstr_passwd">Contraseña</label>
                                     <input id="modrgstr_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
-                    </div>
+</p> </div>
 
-                    <div class="form-group">
+                    <div class="form-group"> <p>
                                     <label for="modrgstr_passwd">Repetir contraseña</label>
                                     <input id="modrgstr_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
-                    </div>
+</p> </div>
 
                     <div class="form-group">
                         <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Registrarse</button>
