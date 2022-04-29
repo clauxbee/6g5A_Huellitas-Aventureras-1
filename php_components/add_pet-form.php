@@ -67,6 +67,11 @@
                   </div>
 
                 </div>
+                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
+                  <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required">Cancelar</button>
+                </div>
+
+                </div>
             </form>
         </div><!--/.row-->
     </div><!--/.container-->
