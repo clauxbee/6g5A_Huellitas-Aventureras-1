@@ -17,22 +17,13 @@ if (isset($_POST["email"]) && !empty($_POST["email"]) &&
     $user->setContraseña($pass);
 
     try {
-        if ($user->findUserByEmailPswd()) {
-            $_SESSION["userID"] = $user->getIdUsuario();
-            $_SESSION["userName"] = $user->getNombre();
-            $_SESSION["userGender"] = $user->getGenero();
-            $_SESSION["userAge"] = $user->getEdad();
-            $_SESSION["userPhone"] = $user->getTelefono();
-            $_SESSION["userAddress"] = $user->getDomicilio();
-            $_SESSION["userMail"] = $user->getCorreo();
-            $_SESSION["userPassword"] = $user->getContraseña();
-            $user->setArrMascotas($user->getIdUsuario());
-            $_SESSION["userPets"] = $user->getArrMascotas();
-        } else
+        if ($user->findUserByEmailPswd())
+            $_SESSION["user"] = $user;
+        else
             $error = "Usuario no encontrado";
     } catch (Exception $e){
         error_log($e->getFile()." ".$e->getLine()." ".$e->getMessage(),0);
-        $sErr = "Error al acceder a la base de datos";
+        $error = "Error al acceder a la base de datos";
     }
 } else
     $error = "Faltan Datos";

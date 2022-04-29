@@ -69,6 +69,11 @@
                         </p>
                     </div>
 
+                </div>
+                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
+                </div>
+
+
             </div>
             </form>
         </div><!--/.row-->
