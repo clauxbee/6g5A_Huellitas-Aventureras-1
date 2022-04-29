@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start() ?>
 <html lang="es">
 <?php include_once("php_components/head.php"); ?>
 <body>

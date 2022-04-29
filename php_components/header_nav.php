@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <header id="header">
     <nav class="navbar navbar-default navbar-static-top" role="banner">
         <div class="container">
@@ -18,7 +15,7 @@ session_start();
             <div class="navbar-collapse collapse">
                 <div class="menu">
                  <?php
-				     if (isset($_SESSION["user"]) && !empty($_SESSION["user"])){
+				     if (isset($_SESSION["userName"]) && !empty($_SESSION["userName"])){
 			     ?>
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation"><a href="index.php">Inicio</a></li>

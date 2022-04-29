@@ -2,6 +2,7 @@
 
 include_once("accesoBD.php");
 include_once("Persona.php");
+include_once("Mascota.php");
 
 class Usuario extends Persona{
    protected $sIdUsuario=0;
