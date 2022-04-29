@@ -1,12 +1,12 @@
 <?php
 
 class Persona{
-	protected $sNombre="";
-	protected $sGenero='';
-	protected $sEdad=0;
-	protected $sTelefono=0;
-	protected $sDomicilio="";
-   protected $sCorreo="";
+	var $sNombre="";
+	var $sGenero='';
+    var $sEdad=0;
+    var $sTelefono=0;
+    var $sDomicilio="";
+    var $sCorreo="";
    
     function setNombre($psNombre){
        $this->sNombre = $psNombre;

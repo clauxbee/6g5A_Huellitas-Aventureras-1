@@ -16,7 +16,7 @@
             <div class="navbar-collapse collapse">
                 <div class="menu">
                  <?php
-				     if (isset($_SESSION["userName"]) && !empty($_SESSION["userName"])){
+				     if (isset($_SESSION["userMail"]) && !empty($_SESSION["userMail"])){
 			     ?>
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation"><a href="index.php">Inicio</a></li>
@@ -25,7 +25,7 @@
                         <li role="presentation"><a href="marketing.php">Marketing</a></li>
                         <li role="presentation"><a href="cuenta.php">Cuenta</a></li>
                         <li role="presentation"><a href="profile.php">Perfil</a></li>
-                        <li role="presentation"><a href="login.php">Iniciar Sesión</a></li>
+                        <li role="presentation"><a href="index.php" onclick="<?php session_destroy() ?>">Cerrar Sesión</a></li>
                     </ul>
 
                 <?php
