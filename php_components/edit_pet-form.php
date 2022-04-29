@@ -1,3 +1,10 @@
+<?php
+$petIndex = $_SESSION["userPets"][$_GET["petIndex"] - 1][0];
+$petName = $_SESSION["userPets"][$_GET["petIndex"] - 1][1];
+$petAge = $_SESSION["userPets"][$_GET["petIndex"] - 1][2];
+$petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
+var_dump($_SESSION);
+?>
 <style>
     body {
         background-image: url("../img/FondoHuellitas.png");
@@ -36,46 +43,37 @@
 
                 <p>Datos de tu peludito:</p>
 
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post"
-                      action="sendemail.php">
-
+                <form id="main-contact-form" class="contact-form" name="contact-form" method="get"
+                      action="../controlador/pet_edit_controller.php">
+                    <input type="hidden" name="userID">
                     <div class="form-group">
                         <p>
                             <label for="modrgst_petnge">Nombre </label>
                             <input id="modrgstr_petname" type="text" name="namePet" class="inputbox" size="18"
-                                   autocomplete="off">
+                                   autocomplete="off" value="<?php echo $petName ?>">
                         </p></div>
 
                     <div class="form-group"><p>
                             <label for="modrgst_petage">Edad</label>
                             <input id="modrgstr_petAge" type="text" name="agePet" class="inputbox" size="18"
-                                   autocomplete="off">
-                        </p></div>
-
-                    <div class="form-group"><p>
-                        <div class="btn-group">
-                            <button type="button" id="modrgstr_petRace" class="btn btn-default dropdown-toggle"
-                                    data-toggle="dropdown"> Raza <span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Pastor Aleman</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Chihuahua</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Caniche</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Otro</a></li>
-                            </ul>
-                        </div>
+                                   autocomplete="off" value="<?php echo $petAge ?>">
                         </p>
                     </div>
 
-                </div>
-                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
-                </div>
-
+                    <div class="form-group"><p>
+                            <label for="modrgst_petage">Raza</label>
+                            <input id="modrgstr_petAge" type="text" name="petRace" class="inputbox" size="18"
+                                   autocomplete="off" value="<?php echo $petRace ?>">
+                        </p>
+                    </div>
 
             </div>
-            </form>
-        </div><!--/.row-->
+            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required" onclick="userID.value = <?php echo $_SESSION["userID"]?>">Confirmar</button>
+        </div>
+
+
+    </div>
+    </form>
+    </div><!--/.row-->
     </div><!--/.container-->
 </section><!--/#contact-page-->
