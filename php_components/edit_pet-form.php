@@ -1,5 +1,6 @@
 <?php
 $petIndex = $_SESSION["userPets"][$_GET["petIndex"] - 1][0];
+$_SESSION["editPetIndex"] = $_GET["petIndex"];
 $petName = $_SESSION["userPets"][$_GET["petIndex"] - 1][1];
 $petAge = $_SESSION["userPets"][$_GET["petIndex"] - 1][2];
 $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
@@ -42,7 +43,7 @@ $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
 
                 <p>Datos de tu peludito:</p>
 
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="get"
+                <form id="main-contact-form" class="contact-form" name="editPetForm" method="get"
                       action="../controlador/pet_edit_controller.php">
                     <input type="hidden" name="userID">
                     <div class="form-group">
@@ -68,6 +69,7 @@ $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
 
             </div>
             <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required" onclick="userID.value = <?php echo $_SESSION["userID"]?>">Confirmar</button>
+            <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="editPetForm.action='../profile.php';">Cancelar</button>
         </div>
 
 

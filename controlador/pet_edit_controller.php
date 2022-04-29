@@ -11,7 +11,7 @@ $userID = 0;
 $petName = "";
 $petAge = 0;
 $petRace = "";
-$petIndex = $_SESSION["lastPetIndex"];
+$petIndex = $_SESSION["editPetIndex"];
 echo $petIndex;
 
 if (isset($_GET["namePet"]) && !empty($_GET["namePet"]) &&
@@ -42,8 +42,12 @@ isset($_GET["petRace"]) && !empty($_GET["petRace"])
             echo "<br>";
             echo "<br>";
             var_dump($user);
-        } else
+        } else {
             $error = "Mascota no registrada";
+            $user->setArrMascotas($userID);
+            $_SESSION["userPets"] = $user->getArrMascotas();
+            header("Location: ../profile.php");
+        }
     }  catch (Exception $e){
         error_log($e->getFile()." ".$e->getLine()." ".$e->getMessage(),0);
         $sErr = "Error al acceder a la base de datos";

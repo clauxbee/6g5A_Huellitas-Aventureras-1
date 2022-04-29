@@ -99,7 +99,8 @@ class Mascota
                       Edad = " . $this->sEdad . ",
                       Raza = '" . $this->sRaza . "',
                       ID_Usuario = " . $this->sIdUsuario . "
-                      WHERE ID_Usuario = " . $this->sIdUsuario . "";
+                      WHERE ID_Usuario = " . $this->sIdUsuario . "
+                      AND ID_Mascotas = " . $this->sIdMascota . "";
 
             echo $query;
 
