@@ -1,3 +1,10 @@
+<?php
+if ($_SESSION["validPetRegister"] == "false") {
+    echo "<div class='col-md-12' style='padding:20px; background-color:#A33D3D; line-height:1; color: white; font-weight: bold;'>
+            Debe rellenar todos los campos.
+          </div>";
+}
+?>
 <style>
     body {
         background-image: url("../img/FondoHuellitas.png");
