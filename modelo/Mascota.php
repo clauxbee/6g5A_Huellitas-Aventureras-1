@@ -126,10 +126,10 @@ class Mascota
         if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
             throw new Exception("Usuario->buscar: faltan datos");
         } else {
-            $query = "INSERT INTO usuarios(ID_Mascotas, Nombre, Edad, Raza, ID_Usuario)
+            $query = "INSERT INTO mascotas(ID_Mascotas, Nombre, Edad, Raza, ID_Usuario)
                       VALUES(" . $this->sIdMascota . ", '" . $this->sNombre . "', " . $this->sEdad . ", '" . $this->sRaza . "', " . $this->sIdUsuario . ")";
 
-            $_SESSION["query"] = $query;
+            echo $query;
 
             if ($db->connect()) {
                 $arrRS = $db->execCommand($query);

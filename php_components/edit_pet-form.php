@@ -3,7 +3,6 @@ $petIndex = $_SESSION["userPets"][$_GET["petIndex"] - 1][0];
 $petName = $_SESSION["userPets"][$_GET["petIndex"] - 1][1];
 $petAge = $_SESSION["userPets"][$_GET["petIndex"] - 1][2];
 $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
-var_dump($_SESSION);
 ?>
 <style>
     body {

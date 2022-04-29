@@ -20,7 +20,6 @@
                             <table width="100%">
                                 <?php
                                 $pets = $_SESSION["userPets"];
-                                var_dump($pets);
                                 for ($i = 0; $i < sizeof($_SESSION["userPets"]); $i++) { ?>
                                     <tr>
                                         <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPets"][$i][1]; ?> </p></td>
