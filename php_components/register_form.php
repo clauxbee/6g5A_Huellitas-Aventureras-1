@@ -1,12 +1,19 @@
+<?php
+if ($_SESSION["validRegister"] == "false") {
+    echo "<div class='col-md-12' style='padding:20px; background-color:#A33D3D; line-height:1; color: white; font-weight: bold;'>
+            Faltan campos obligatorios por rellenar.
+          </div>";
+}
+?>
 <section class="contact-page">
     <div class="container">
         <div class="text-center">
             <h2 class="title">Crea tu cuenta</h2>
-
         </div>
         <div class="row contact-wrap">
             <div class="status alert alert-success" style="display: none"></div>
-            <form id="main-contact-form" class="contact-form" name="contact-form" method="GET" action="../controlador/register_controller.php">
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="GET"
+                  action="../controlador/register_controller.php">
                 <div class="col-sm-5 col-sm-offset-1">
                     <img src=img/regIcon.png>
                     <p>Ingresa los siguientes datos</p>
@@ -43,20 +50,22 @@
                         </p>
                     </div>
                     <div class="form-group"><p>
-                            <label for="modrgstr_useremail">Correo</label>
+                            <label for="modrgstr_useremail">Correo* </label>
                             <input id="modrgstr_useremail" type="email" name="emailUser" class="inputbox" size="18"
                                    autocomplete="off">
                         </p></div>
 
                     <div class="form-group"><p>
-                            <label for="modrgstr_passwd">Contraseña</label>
-                            <input id="modrgstr_passwd" type="password" name="passwordOneUser" class="inputbox" size="18"
+                            <label for="modrgstr_passwd">Contraseña* </label>
+                            <input id="modrgstr_passwd" type="password" name="passwordOneUser" class="inputbox"
+                                   size="18"
                                    autocomplete="off">
                         </p></div>
 
                     <div class="form-group"><p>
-                            <label for="modrgstr_passwd">Repetir contraseña</label>
-                            <input id="modrgstr_passwd" type="password" name="passwordTwoUser" class="inputbox" size="18"
+                            <label for="modrgstr_passwd">Repetir contraseña* </label>
+                            <input id="modrgstr_passwd" type="password" name="passwordTwoUser" class="inputbox"
+                                   size="18"
                                    autocomplete="off">
                         </p></div>
 

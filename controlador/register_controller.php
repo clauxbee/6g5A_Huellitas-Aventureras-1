@@ -41,11 +41,18 @@ if (isset($_GET["emailUser"]) && !empty($_GET["emailUser"]) &&
         }
     } else
         $error = "Las contraseñas no coinciden";
-} else
+} else {
     $error = "Faltan Datos";
+    header("Location: ../register.php");
+    $msg = "Debe establecer un correo y una contraseña.";
+    $_SESSION["validRegister"]="false";
+    var_dump($_SESSION);
+}
 
-if ($error == "")
+if ($error == "") {
     header("Location: ../login.php");
+    $_SESSION["validRegister"]="true";
+}
 else {
     echo $error;
     echo $index;

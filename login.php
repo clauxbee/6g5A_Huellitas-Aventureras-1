@@ -3,7 +3,7 @@
 <?php include_once("php_components/head.php"); ?>
 <body>
 <?php include_once("php_components/header_nav.php"); ?>
-
+<?php $_SESSION["validRegister"] = "true"; ?>
 <?php include_once("php_components/login_form.php"); ?>
 
 <?php include_once("php_components/footer.php"); ?>
