@@ -1,9 +1,10 @@
 <?php
-$petIndex = $_SESSION["userPets"][$_GET["petIndex"] - 1][0];
+session_start();
+$petIndex = $_SESSION["userPets"][$_GET["petsArrayIndex"]][0];
 $_SESSION["editPetIndex"] = $_GET["petIndex"];
-$petName = $_SESSION["userPets"][$_GET["petIndex"] - 1][1];
-$petAge = $_SESSION["userPets"][$_GET["petIndex"] - 1][2];
-$petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
+$petName = $_SESSION["userPets"][$_GET["petsArrayIndex"]][1];
+$petAge = $_SESSION["userPets"][$_GET["petsArrayIndex"]][2];
+$petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
 ?>
 <style>
     body {
@@ -45,7 +46,8 @@ $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
 
                 <form id="main-contact-form" class="contact-form" name="editPetForm" method="get"
                       action="../controlador/pet_edit_controller.php">
-                    <input type="hidden" name="userID">
+                    <input type="hidden" name="userID" value="<?php echo $_SESSION["userID"]?>">
+
                     <div class="form-group">
                         <p>
                             <label for="modrgst_petnge">Nombre </label>
@@ -69,12 +71,11 @@ $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
 
                 </div>
                   <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
+            <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="editPetForm.action='../profile.php';">Cancelar</button>
                 </div>
 
 
             </div>
-            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required" onclick="userID.value = <?php echo $_SESSION["userID"]?>">Confirmar</button>
-            <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="editPetForm.action='../profile.php';">Cancelar</button>
         </div>
 
 

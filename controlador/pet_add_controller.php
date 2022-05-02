@@ -18,6 +18,10 @@ if (isset($_GET["namePet"]) && !empty($_GET["namePet"]) &&
     isset($_GET["agePet"]) && !empty($_GET["agePet"]) &&
     isset($_GET["petRace"]) && !empty($_GET["petRace"])
 ) {
+    $userID = $_GET["userID"];
+    $petName = $_GET["namePet"];
+    $petAge = $_GET["agePet"];
+    $petRace = $_GET["petRace"];
     $pet->setNombre($petName);
     $pet->setEdad($petAge);
     $pet->setRaza($petRace);

@@ -19,6 +19,7 @@ isset($_GET["agePet"]) && !empty($_GET["agePet"]) &&
 isset($_GET["petRace"]) && !empty($_GET["petRace"])
 ) {
     $userID = $_GET["userID"];
+    echo $userID;
     $petName = $_GET["namePet"];
     $petAge = $_GET["agePet"];
     $petRace = $_GET["petRace"];
@@ -46,7 +47,7 @@ isset($_GET["petRace"]) && !empty($_GET["petRace"])
             $error = "Mascota no registrada";
             $user->setArrMascotas($userID);
             $_SESSION["userPets"] = $user->getArrMascotas();
-            header("Location: ../profile.php");
+//            header("Location: ../profile.php");
         }
     }  catch (Exception $e){
         error_log($e->getFile()." ".$e->getLine()." ".$e->getMessage(),0);
