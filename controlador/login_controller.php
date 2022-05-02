@@ -32,7 +32,7 @@ if (isset($_POST["email"]) && !empty($_POST["email"]) &&
             $error = "Usuario no encontrado";
     } catch (Exception $e){
         error_log($e->getFile()." ".$e->getLine()." ".$e->getMessage(),0);
-        $sErr = "Error al acceder a la base de datos";
+        $error = "Error al acceder a la base de datos";
     }
 } else
     $error = "Faltan Datos";

@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `huellitas_aventureras` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `huellitas_aventureras` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `huellitas_aventureras`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
 -- Host: localhost    Database: huellitas_aventureras
 -- ------------------------------------------------------
--- Server version	8.0.22
+-- Server version	5.7.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,11 +25,11 @@ DROP TABLE IF EXISTS `mascotas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mascotas` (
-  `ID_Mascotas` int NOT NULL,
+  `ID_Mascotas` int(11) NOT NULL,
   `Nombre` varchar(20) NOT NULL,
-  `Edad` tinyint DEFAULT NULL,
+  `Edad` tinyint(4) DEFAULT NULL,
   `Raza` text,
-  `ID_Usuario` int DEFAULT NULL,
+  `ID_Usuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID_Mascotas`),
   KEY `fk_mascotas_usuarios_idx` (`ID_Usuario`),
   CONSTRAINT `fk_mascotas_usuarios` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuarios` (`ID_Usuario`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -42,6 +42,7 @@ CREATE TABLE `mascotas` (
 
 LOCK TABLES `mascotas` WRITE;
 /*!40000 ALTER TABLE `mascotas` DISABLE KEYS */;
+INSERT INTO `mascotas` VALUES (1,'Bonie',10,'Cocker Spaniel',1),(2,'Kiara',5,'Criolla',1);
 /*!40000 ALTER TABLE `mascotas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,12 +54,12 @@ DROP TABLE IF EXISTS `metodo_pago`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metodo_pago` (
-  `ID_Metodo` int NOT NULL,
+  `ID_Metodo` int(11) NOT NULL,
   `Titular` varchar(40) NOT NULL,
   `Tipo_Producto` varchar(16) DEFAULT NULL,
   `Numero` varchar(18) DEFAULT NULL,
   `CVV` varchar(3) DEFAULT NULL,
-  `ID_Usuario` int DEFAULT NULL,
+  `ID_Usuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID_Metodo`),
   KEY `fk_metodopago_usuario_idx` (`ID_Usuario`),
   CONSTRAINT `fk_metodopago_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuarios` (`ID_Usuario`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -82,11 +83,11 @@ DROP TABLE IF EXISTS `paseadores`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `paseadores` (
-  `ID_Paseador` int NOT NULL,
+  `ID_Paseador` int(11) NOT NULL,
   `Nombre` varchar(40) NOT NULL,
   `Genero` char(1) DEFAULT NULL,
-  `Edad` tinyint DEFAULT NULL,
-  `Telefono` bigint DEFAULT NULL,
+  `Edad` tinyint(4) DEFAULT NULL,
+  `Telefono` bigint(20) DEFAULT NULL,
   `Domicilio` varchar(50) DEFAULT NULL,
   `Correo` text,
   PRIMARY KEY (`ID_Paseador`)
@@ -110,13 +111,13 @@ DROP TABLE IF EXISTS `paseo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `paseo` (
-  `ID_Paseo` int NOT NULL,
-  `Duracion` tinyint DEFAULT NULL,
+  `ID_Paseo` int(11) NOT NULL,
+  `Duracion` tinyint(4) DEFAULT NULL,
   `Estado` varchar(10) DEFAULT NULL,
   `Hora_Solicitud` varchar(5) DEFAULT NULL,
-  `ID_Usuario` int DEFAULT NULL,
-  `ID_Mascota` int DEFAULT NULL,
-  `ID_Paseador` int DEFAULT NULL,
+  `ID_Usuario` int(11) DEFAULT NULL,
+  `ID_Mascota` int(11) DEFAULT NULL,
+  `ID_Paseador` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID_Paseo`),
   KEY `fk_paseo_usuario_idx` (`ID_Usuario`),
   KEY `fk_paseo_paseador_idx` (`ID_Paseador`),
@@ -144,11 +145,11 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `ID_Usuario` int NOT NULL,
+  `ID_Usuario` int(11) NOT NULL,
   `Nombre` varchar(40) NOT NULL,
   `Genero` char(1) DEFAULT NULL,
-  `Edad` tinyint DEFAULT NULL,
-  `Telefono` bigint DEFAULT NULL,
+  `Edad` tinyint(4) DEFAULT NULL,
+  `Telefono` bigint(20) DEFAULT NULL,
   `Domicilio` varchar(50) DEFAULT NULL,
   `Correo` text,
   `Contraseña` text,
@@ -175,4 +176,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-28  0:14:05
+-- Dump completed on 2022-04-29 13:21:25

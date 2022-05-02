@@ -4,11 +4,11 @@ include_once("accesoBD.php");
 
 class Mascota
 {
-    protected $sNombre = "";
-    protected $sEdad = 0;
-    protected $sRaza = "";
-    protected $sIdUsuario = 0;
-    protected $sIdMascota = 0;
+    var $sNombre = "";
+    var $sEdad = 0;
+    var $sRaza = "";
+    var $sIdUsuario = 0;
+    var $sIdMascota = 0;
 
     function setNombre($psNombre)
     {
@@ -58,6 +58,91 @@ class Mascota
     function getIdMascota()
     {
         return $this->sIdMascota;
+    }
+
+    public function findAllPets()
+    {
+        $db = new accesoBD();
+        $query = "";
+        $arrRS = null;
+        $lastIndex = 0;
+
+        if ($db->connect()) {
+            $query = "SELECT * FROM mascotas";
+
+            $arrRS = $db->execQuery($query);
+            $db->disconnect();
+
+            if ($arrRS != null) {
+                foreach ($arrRS as $rowPet) {
+                    $lastIndex++;
+                }
+            }
+        }
+
+        $_SESSION["lastPetIndex"] = $lastIndex;
+    }
+
+    public function updatePet()
+    {
+        $db = new accesoBD();
+        $registered = false;
+        $query = "";
+        $arrRS = null;
+
+        if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
+            throw new Exception("Usuario->buscar: faltan datos");
+        } else {
+            $query = "UPDATE mascotas SET
+                      ID_Mascotas = " . $this->sIdMascota . ",
+                      Nombre = '" . $this->sNombre . "',
+                      Edad = " . $this->sEdad . ",
+                      Raza = '" . $this->sRaza . "',
+                      ID_Usuario = " . $this->sIdUsuario . "
+                      WHERE ID_Usuario = " . $this->sIdUsuario . "
+                      AND ID_Mascotas = " . $this->sIdMascota . "";
+
+            echo $query;
+
+            if ($db->connect()) {
+                $arrRS = $db->execCommand($query);
+                $db->disconnect();
+
+                if ($arrRS != null) {
+                    $registered = true;
+                }
+            }
+        }
+
+        return $registered;
+    }
+
+    public function addPet()
+    {
+        $db = new accesoBD();
+        $registered = false;
+        $query = "";
+        $arrRS = null;
+
+        if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
+            throw new Exception("Usuario->buscar: faltan datos");
+        } else {
+            $query = "INSERT INTO mascotas(ID_Mascotas, Nombre, Edad, Raza, ID_Usuario)
+                      VALUES(" . $this->sIdMascota . ", '" . $this->sNombre . "', " . $this->sEdad . ", '" . $this->sRaza . "', " . $this->sIdUsuario . ")";
+
+            echo $query;
+
+            if ($db->connect()) {
+                $arrRS = $db->execCommand($query);
+                $db->disconnect();
+
+                if ($arrRS != null) {
+                    $registered = true;
+                }
+            }
+        }
+
+        return $registered;
     }
 }
 
