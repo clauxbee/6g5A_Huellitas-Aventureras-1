@@ -117,6 +117,35 @@ class Mascota
         return $registered;
     }
 
+    public function deletePet()
+    {
+        $db = new accesoBD();
+        $registered = false;
+        $query = "";
+        $arrRS = null;
+
+        if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
+            throw new Exception("Usuario->buscar: faltan datos");
+        } else {
+            $query = "DELETE FROM mascotas
+                      WHERE ID_Usuario=" . $this->sIdUsuario . "
+                      AND ID_Mascotas = " . $this->sIdMascota . "";
+
+            echo $query;
+
+            if ($db->connect()) {
+                $arrRS = $db->execCommand($query);
+                $db->disconnect();
+
+                if ($arrRS != null) {
+                    $registered = true;
+                }
+            }
+        }
+
+        return $registered;
+    }
+
     public function addPet()
     {
         $db = new accesoBD();

@@ -71,6 +71,7 @@ $petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
 
                 </div>
                   <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
+                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required"  onclick="editPetForm.action='../controlador/pet_delete_controller.php';">Eliminar</button>
             <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="editPetForm.action='../profile.php';">Cancelar</button>
                 </div>
 

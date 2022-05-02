@@ -15,8 +15,8 @@ $petIndex = $_SESSION["editPetIndex"];
 echo $petIndex;
 
 if (isset($_GET["namePet"]) && !empty($_GET["namePet"]) &&
-isset($_GET["agePet"]) && !empty($_GET["agePet"]) &&
-isset($_GET["petRace"]) && !empty($_GET["petRace"])
+    isset($_GET["agePet"]) && !empty($_GET["agePet"]) &&
+    isset($_GET["petRace"]) && !empty($_GET["petRace"])
 ) {
     $userID = $_GET["userID"];
     echo $userID;
@@ -34,7 +34,7 @@ isset($_GET["petRace"]) && !empty($_GET["petRace"])
 //    var_dump($_SESSION);
 
     try {
-        if ($pet->updatePet()) {
+        if ($pet->deletePet()) {
             $user->setArrMascotas($userID);
             $_SESSION["userPets"] = $user->getArrMascotas();
             echo "<br>";
@@ -44,7 +44,7 @@ isset($_GET["petRace"]) && !empty($_GET["petRace"])
             echo "<br>";
             var_dump($user);
         } else {
-            $error = "Mascota no registrada";
+            $error = "Mascota no eliminada";
             $user->setArrMascotas($userID);
             $_SESSION["userPets"] = $user->getArrMascotas();
             header("Location: ../profile.php");
