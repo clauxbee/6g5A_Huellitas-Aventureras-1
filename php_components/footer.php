@@ -30,26 +30,5 @@
         </div>
 </footer>
 
-<div class="sub-footer">
-    <div class="container">
-        <div class="social-icon">
-            <div class="col-md-4">
-                <ul class="social-network">
-                    <li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-md-offset-4">
-            <div class="copyright">
-                    &copy;   2022 Huellitas Aventureras.
-            </div>
-            <!--
-                All links in the footer should remain intact.
-                Licenseing information is available at: http://bootstraptaste.com/license/
-                You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Day
-            -->
-        </div>
     </div>
 </div>

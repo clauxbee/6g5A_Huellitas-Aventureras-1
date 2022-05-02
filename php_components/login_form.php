@@ -1,6 +1,9 @@
+
 <div class="main">
+<div class="container">
+    
     <div class="shop_top">
-        <div class="container">
+    
             <div class="col-md-6">
                 <div class="login-page">
                     <script src="js/validar.js"></script>
@@ -61,5 +64,7 @@
             </div>
         </div>
     </div>
+
 </div>
+
 <script src="../js/validar.js"></script>
