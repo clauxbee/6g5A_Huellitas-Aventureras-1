@@ -67,6 +67,11 @@ $petRace = $_SESSION["userPets"][$_GET["petIndex"] - 1][3];
                         </p>
                     </div>
 
+                </div>
+                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
+                </div>
+
+
             </div>
             <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required" onclick="userID.value = <?php echo $_SESSION["userID"]?>">Confirmar</button>
             <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="editPetForm.action='../profile.php';">Cancelar</button>

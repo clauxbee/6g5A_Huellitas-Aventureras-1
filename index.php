@@ -15,4 +15,5 @@
 
 <?php include_once("php_components/scripts.php"); ?>
 </body>
+
 </html>
