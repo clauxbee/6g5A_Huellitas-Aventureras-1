@@ -2,13 +2,56 @@
 session_start();
 include_once("accesoBD.php");
 include_once("Persona.php");
-include_once("Mascota.php");
+include_once("MetodoPago.php");
 
 class Usuario extends Persona
 {
     var $sIdUsuario = 0;
     var $sContraseña = "";
     var $arrMascotas = array();
+    var $arrMetodos = array();
+
+    public function getArrMetodos()
+    {
+        return $this->arrMetodos;
+    }
+
+    public function setArrMetodos($userID)
+    {
+        $db = new accesoBD();
+        $payments = array();
+        $query = "";
+        $arrRS = null;
+        $payIndex = 0;
+        $pay = null;
+
+        if ($db->connect()) {
+            $query = "SELECT * FROM metodo_pago
+                       WHERE metodo_pago.ID_Usuario = '" . $userID . "'";
+
+            $arrRS = $db->execQuery($query);
+            $db->disconnect();
+
+            if ($arrRS != null) {
+                foreach ($arrRS as $rowPet) {
+                    $pay = new MetodoPago();
+
+                    $pay->setIdMetodo($rowPet[0]);
+                    $pay->setTitular($rowPet[1]);
+                    $pay->setTipoProducto($rowPet[2]);
+                    $pay->setNumero($rowPet[3]);
+                    $pay->setCVV($rowPet[4]);
+                    $pay->setIdUsuario($rowPet[5]);
+
+                    $payments[$payIndex] = array($pay->getIdMetodo(), $pay->getTitular(), $pay->getTipoProducto(), $pay->getNumero(), $pay->getCVV(), $pay->getIdUsuario());
+
+                    $payIndex++;
+                }
+            }
+        }
+
+        $this->arrMascotas = $payments;
+    }
 
     public function getArrMascotas()
     {

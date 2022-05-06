@@ -10,7 +10,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand" style="height: 50px; margin: 15px; padding: 0">
-                    <a href="index.php"><img src="..\img\favicon.png" alt="Huellitas Aventureras" style="height: 100%;"></a>
+                    <a href="index.php">
+                        <img src="..\img\favicon.png" alt="Huellitas Aventureras" style="height: 100%;">
+                    </a>
+                    <?php
+                    if (isset($_SESSION["userMail"]) && !empty($_SESSION["userMail"])){
+                    ?>
+                    <p style="text-align: center; color: black;">Usuario: <?php echo $_SESSION["userName"]; ?></p>
+                    <?php } ?>
                 </div>
             </div>
             <div class="navbar-collapse collapse">
