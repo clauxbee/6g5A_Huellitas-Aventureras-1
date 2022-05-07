@@ -39,6 +39,10 @@ if (isset($_POST["email"]) && !empty($_POST["email"]) &&
 } else
     $error = "Faltan Datos";
 
-if ($error == "")
+if ($error == "") {
+    var_dump($_SESSION);
+    echo "<br>";
+    var_dump($user);
     header("Location: ../index.php");
+}
 ?>

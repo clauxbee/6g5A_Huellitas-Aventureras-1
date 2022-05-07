@@ -1,4 +1,10 @@
-
+<?php
+if ($_SESSION["validPetRegister"] == "false") {
+    echo "<div class='col-md-12' style='padding:20px; background-color:#A33D3D; line-height:1; color: white; font-weight: bold;'>
+            Debe rellenar todos los campos.
+          </div>";
+}
+?>
 <style>
     body {
         background-image: url("../img/FondoHuellitas.png");
@@ -29,7 +35,7 @@
                 <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
                     <br>
                 </div>
-                <img src="img/iconCard.jpg" width="500" height="220">
+                <img src="img/iconCard.png" width="500" height="220" style="width: 100%;">
 
                 <div style=" padding:1px; background-color:#65AAF0; line-height:2.5;">
                     <br></div>
@@ -39,8 +45,8 @@
 
                 <p>Ingresa los datos de tu tarjeta:</p>
 
-                <form id="main-contact-form" class="contact-form" name="addPetForm" method="get"
-                      action="../controlador/pay_add_controller.php">
+                <form id="main-contact-form" class="contact-form" name="addPayForm" method="get"
+                      action="../controlador/payment_add_controller.php">
                     <input type="hidden" name="userID">
 
                     <div class="form-group">
@@ -72,8 +78,14 @@
                     </div>
 
             </div>
-            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required" onclick="userID.value = <?php echo $_SESSION["userID"]?>">Confirmar</button>
-            <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="addPetForm.action='../profile.php';">Cancelar</button>
+            <p style="text-align: right;">
+                <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required"
+                        onclick="userID.value = <?php echo $_SESSION["userID"] ?>">Confirmar
+                </button>
+                <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required"
+                        onclick="addPayForm.action='../profile.php';">Cancelar
+                </button>
+            </p>
         </div>
 
     </div>

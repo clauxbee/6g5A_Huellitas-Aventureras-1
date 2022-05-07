@@ -50,7 +50,7 @@ class Usuario extends Persona
             }
         }
 
-        $this->arrMascotas = $payments;
+        $this->arrMetodos = $payments;
     }
 
     public function getArrMascotas()

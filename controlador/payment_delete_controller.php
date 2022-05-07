@@ -28,7 +28,7 @@ if (isset($_GET["namePay"]) && !empty($_GET["namePay"]) &&
     $pay->setTitular($payTitular);
     $pay->setTipoProducto($payTipo);
     $pay->setNumero($payNumero);
-    $pay->setCVV($payNumero);
+    $pay->setCVV($payCVV);
     $pay->setIdMetodo($payIndex);
     $pay->setIdUsuario($userID);
 
@@ -37,7 +37,7 @@ if (isset($_GET["namePay"]) && !empty($_GET["namePay"]) &&
 //    var_dump($_SESSION);
 
     try {
-        if ($pay->updatePay()) {
+        if ($pay->deletePay()) {
             $user->setArrMetodos($userID);
             $_SESSION["userPays"] = $user->getArrMetodos();
             echo "<br>";

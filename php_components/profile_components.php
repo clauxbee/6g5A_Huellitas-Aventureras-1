@@ -16,8 +16,8 @@
                     </div>
                     <div style=" padding:20px; background-color:#f2f2f2; line-height:1;">
                         <form method="get" action="../edit-pet.php">
-                            <input type="hidden" name="petIndex">
-                            <input type="hidden" name="petsArrayIndex">
+                            <input type="hidden" name="payIndex">
+                            <input type="hidden" name="paysArrayIndex">
                             <table width="100%">
                                 <?php
                                 $pets = $_SESSION["userPets"];
@@ -26,7 +26,7 @@
                                         <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPets"][$i][1]; ?> </p></td>
                                         <td style="text-align: right">
                                             <button href="inicio.html" type="getnow" name="subscribe"
-                                                    class="btn btn-primary btn-lg" required="required" onclick="petIndex.value=<?php echo $_SESSION["userPets"][$i][0]; ?>; petsArrayIndex.value=<?php echo $i; ?>">Editar
+                                                    class="btn btn-primary btn-lg" required="required" onclick="payIndex.value=<?php echo $_SESSION["userPets"][$i][0]; ?>; paysArrayIndex.value=<?php echo $i; ?>">Editar
                                             </button>
                                         </td>
                                     </tr>
