@@ -1,11 +1,3 @@
-<?php
-session_start();
-$petIndex = $_SESSION["userPets"][$_GET["petsArrayIndex"]][0];
-$_SESSION["editPetIndex"] = $_GET["petIndex"];
-$petName = $_SESSION["userPets"][$_GET["petsArrayIndex"]][1];
-$petAge = $_SESSION["userPets"][$_GET["petsArrayIndex"]][2];
-$petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
-?>
 <style>
     body {
         background-image: url("../img/FondoHuellitas.png");
@@ -22,7 +14,7 @@ $petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
 <section class="contact-page">
     <div class="container">
         <div class="text-center">
-            <h2 class="title">Edita los datos de tu mascota</h2>
+            <h2 class="title">Edita los datos para tu forma de pago</h2>
 
         </div>
         <div class="row contact-wrap">
@@ -33,7 +25,7 @@ $petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
                 <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
                     <br>
                 </div>
-                <img src="img/peticon.png" width="500" height="220">
+                <img src="img/iconCard.jpg" width="500" height="220">
 
                 <div style=" padding:1px; background-color:#65AAF0; line-height:2.5;">
                     <br></div>
@@ -41,30 +33,37 @@ $petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
 
             <div class="col-sm-5">
 
-                <p>Datos de tu peludito:</p>
+                <p>Datos de tu método de pago:</p>
 
-                <form id="main-contact-form" class="contact-form" name="editPetForm" method="get"
-                      action="../controlador/pet_edit_controller.php">
+                <form id="main-contact-form" class="contact-form" name="editPayForm" method="get"
+                      action="../controlador/pay_edit_controller.php">
                     <input type="hidden" name="userID" value="<?php echo $_SESSION["userID"]?>">
 
                     <div class="form-group">
                         <p>
-                            <label for="modrgst_petnge">Nombre </label>
-                            <input id="modrgstr_petname" type="text" name="namePet" class="inputbox" size="18"
-                                   autocomplete="off" value="<?php echo $petName ?>">
+                            <label for="modrgst_userTtlr">Titular </label>
+                            <input id="modrgstr_userTtlr" type="text" name="namePay" class="inputbox" size="18"
+                                   autocomplete="off" value="<?php echo $namePay ?>">
                         </p></div>
 
                     <div class="form-group"><p>
-                            <label for="modrgst_petage">Edad</label>
-                            <input id="modrgstr_petAge" type="text" name="agePet" class="inputbox" size="18"
-                                   autocomplete="off" value="<?php echo $petAge ?>">
+                            <label for="modrgst_userMtdpg">Método de pago:</label>
+                            <input id="modrgst_userMtdpg" type="text" name="typePay" class="inputbox" size="18"
+                                   autocomplete="off" value="<?php echo $typePay ?>">
                         </p>
                     </div>
 
                     <div class="form-group"><p>
-                            <label for="modrgst_petage">Raza</label>
-                            <input id="modrgstr_petAge" type="text" name="petRace" class="inputbox" size="18"
-                                   autocomplete="off" value="<?php echo $petRace ?>">
+                            <label for="modrgst_userNmrcnt">Número de cuenta o CLABE</label>
+                            <input id="modrgst_userNmrcnt" type="text" name="numberPay" class="inputbox" size="18"
+                                   autocomplete="off" value="<?php echo $numberPay ?>">
+                        </p>
+                    </div>
+
+                    <div class="form-group"><p>
+                            <label for="modrgst_userCvv">CVV</label>
+                            <input id="modrgst_userCvv" type="text" name="cvvPay" class="inputbox" size="18"
+                                   autocomplete="off" value="<?php echo $cvvPay ?>">
                         </p>
                     </div>
 
