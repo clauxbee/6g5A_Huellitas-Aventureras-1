@@ -84,7 +84,11 @@ class MetodoPago
 
             if ($arrRS != null) {
                 foreach ($arrRS as $rowPay) {
-                    $lastIndex++;
+                    if ($rowPay[0] != 1) {
+                        $lastIndex = $rowPay[0];
+                    } else {
+                        $lastIndex++;
+                    }
                 }
             }
         }
