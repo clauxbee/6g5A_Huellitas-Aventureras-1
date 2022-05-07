@@ -78,14 +78,14 @@ if ($_SESSION["validPetRegister"] == "false") {
                     </div>
 
             </div>
-            <p style="text-align: right;">
+            <div style="text-align: right;">
                 <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required"
                         onclick="userID.value = <?php echo $_SESSION["userID"] ?>">Confirmar
                 </button>
                 <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required"
                         onclick="addPayForm.action='../profile.php';">Cancelar
                 </button>
-            </p>
+            </div>
         </div>
 
     </div>

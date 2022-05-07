@@ -1,5 +1,5 @@
 <section class="contact-page">
-<script src="js/validSR.js"></script>
+    <script src="js/validSR.js"></script>
     <div class="container">
         <div class="text-center">
             <h2>Solicitud de Paseo</h2>
@@ -7,15 +7,18 @@
         </div>
         <div class="row contact-wrap">
             <div class="status alert alert-success" style="display: none"></div>
-            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" onsubmit="return valSR();">
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="get"
+                  action="../controlador/ride_request_controller.php" onsubmit="return valSR();">
                 <div class="col-sm-5 col-sm-offset-1">
+                    <input type="hidden" name="userID">
                     <div class="form-group">
                         <label>Nombre de la Mascota *</label>
                         <input id="petName" type="text" name="petName" class="form-control" placeholder="Mascota">
                     </div>
                     <div class="form-group">
                         <label>Hora de Inicio *</label>
-                        <input id="starHour" type="text" name="startHour" class="form-control" placeholder="HH:MM am" required="required">
+                        <input id="starHour" type="text" name="startHour" class="form-control" placeholder="HH:MM am"
+                               required="required">
                     </div>
                     <div class="form-group">
                         <label>Seleccione el Paseador *</label>
@@ -36,7 +39,8 @@
                         <textarea name="extraHints" id="extraHints" class="form-control" rows="8"></textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Solicitar</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required" onclick="userID.value = <?php echo $_SESSION["userID"]?>">Agendar
+                        </button>
                     </div>
                 </div>
             </form>

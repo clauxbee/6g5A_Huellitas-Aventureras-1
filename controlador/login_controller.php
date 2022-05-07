@@ -30,6 +30,8 @@ if (isset($_POST["email"]) && !empty($_POST["email"]) &&
             $_SESSION["userPets"] = $user->getArrMascotas();
             $user->setArrMetodos($user->getIdUsuario());
             $_SESSION["userPays"] = $user->getArrMetodos();
+            $user->setArrPaseos($user->getIdUsuario());
+            $_SESSION["userRides"] = $user->getArrPaseos();
         } else
             $error = "Usuario no encontrado";
     } catch (Exception $e){

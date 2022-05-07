@@ -76,7 +76,7 @@ $cvvPay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][4];
                     </div>
 
             </div>
-            <p style="text-align: right;">
+            <div style="text-align: right;">
             <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
             <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required"
                     onclick="editPayForm.action='../controlador/payment_delete_controller.php';">Eliminar
@@ -84,7 +84,7 @@ $cvvPay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][4];
             <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required"
                     onclick="editPayForm.action='../profile.php';">Cancelar
             </button>
-            </p>
+            </div>
         </div>
 
 
