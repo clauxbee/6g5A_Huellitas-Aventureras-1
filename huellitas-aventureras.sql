@@ -71,7 +71,6 @@ CREATE TABLE `metodo_pago` (
 
 LOCK TABLES `metodo_pago` WRITE;
 /*!40000 ALTER TABLE `metodo_pago` DISABLE KEYS */;
-INSERT INTO `metodo_pago` VALUES (2,'Prueba 2','CLABE','126515168456','145',2);
 /*!40000 ALTER TABLE `metodo_pago` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,7 +127,6 @@ CREATE TABLE `paseo` (
 
 LOCK TABLES `paseo` WRITE;
 /*!40000 ALTER TABLE `paseo` DISABLE KEYS */;
-INSERT INTO `paseo` VALUES (1,120,'En curso','10:00',2,'Kiara'),(2,60,'En curso','10:00',1,'Kiara'),(3,60,'En curso','10:00',2,'Bonie');
 /*!40000 ALTER TABLE `paseo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,7 +156,6 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Prueba','O',20,2721548575,'Prueba','test@gmail.com','test'),(2,'','O',0,522721681262,'Calle La Joya 799','bdpalagot@gmail.com','asd');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -171,4 +168,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-07  0:26:49
+-- Dump completed on 2022-05-08  0:17:56
