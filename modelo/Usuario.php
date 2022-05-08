@@ -159,6 +159,42 @@ class Usuario extends Persona
         return $this->sContraseña;
     }
 
+    public function updateUser()
+    {
+        $db = new accesoBD();
+        $registered = false;
+        $query = "";
+        $arrRS = null;
+
+        if ($this->sNombre == "" || $this->sEdad == "" || $this->sGenero == "" || $this->sTelefono == "" || $this->sDomicilio == "" || $this->sCorreo == "" || $this->sContraseña == "") {
+            throw new Exception("Usuario->buscar: faltan datos");
+        } else {
+            $query = "UPDATE usuarios SET
+                      ID_Usuario = " . $this->sIdUsuario . ",
+                      Nombre = '" . $this->sNombre . "',
+                      Genero = '" . $this->sGenero . "',
+                      Edad = " . $this->sEdad . ",
+                      Telefono = " . $this->sTelefono . ",
+                      Domicilio = '" . $this->sDomicilio . "',
+                      Correo = '" . $this->sCorreo . "',
+                      Contraseña = '" . $this->sContraseña . "'
+                      WHERE ID_Usuario = " . $this->sIdUsuario . "";
+
+            echo $query;
+
+            if ($db->connect()) {
+                $arrRS = $db->execCommand($query);
+                $db->disconnect();
+
+                if ($arrRS != null) {
+                    $registered = true;
+                }
+            }
+        }
+
+        return $registered;
+    }
+
     public function addUser()
     {
         $db = new accesoBD();

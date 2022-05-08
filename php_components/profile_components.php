@@ -23,10 +23,13 @@
                                 $pets = $_SESSION["userPets"];
                                 for ($i = 0; $i < sizeof($_SESSION["userPets"]); $i++) { ?>
                                     <tr>
-                                        <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPets"][$i][1]; ?> </p></td>
+                                        <td style="padding-top: 1.5em">
+                                            <p> <?php echo $_SESSION["userPets"][$i][1]; ?> </p></td>
                                         <td style="text-align: right">
                                             <button href="inicio.html" type="getnow" name="subscribe"
-                                                    class="btn btn-primary btn-lg" required="required" onclick="petIndex.value=<?php echo $_SESSION["userPets"][$i][0]; ?>; petsArrayIndex.value=<?php echo $i; ?>">Editar
+                                                    class="btn btn-primary btn-lg" required="required"
+                                                    onclick="petIndex.value=<?php echo $_SESSION["userPets"][$i][0]; ?>; petsArrayIndex.value=<?php echo $i; ?>">
+                                                Editar
                                             </button>
                                         </td>
                                     </tr>
@@ -73,9 +76,12 @@
                         </p>
                     </div>
                     <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
-                    <button href="edit-data.php" type="getnow" name="subscribe"
-                                                    class="btn btn-primary btn-lg">Editar</button>    
-                    <br>
+                        <a href="../edit-data.php">
+                            <button href="edit-data.php" type="getnow" name="subscribe"
+                                    class="btn btn-primary btn-lg">Editar
+                            </button>
+                        </a>
+                        <br>
                     </div>
                     <div style=" margin-top:25px;  padding:5px; background-color:#65AAF0; line-height:1.4;">
                         <h4 style="margin: rigth 30px;"> Método de Pago</h4>
@@ -89,10 +95,13 @@
                                 $pets = $_SESSION["userPays"];
                                 for ($i = 0; $i < sizeof($_SESSION["userPays"]); $i++) { ?>
                                     <tr>
-                                        <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPays"][$i][2]; ?>. <?php echo $_SESSION["userPays"][$i][3]; ?> </p></td>
+                                        <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPays"][$i][2]; ?>
+                                                . <?php echo $_SESSION["userPays"][$i][3]; ?> </p></td>
                                         <td style="text-align: right">
                                             <button href="inicio.html" type="getnow" name="subscribe"
-                                                    class="btn btn-primary btn-lg" required="required" onclick="payIndex.value=<?php echo $_SESSION["userPays"][$i][0]; ?>; paysArrayIndex.value=<?php echo $i; ?>">Editar
+                                                    class="btn btn-primary btn-lg" required="required"
+                                                    onclick="payIndex.value=<?php echo $_SESSION["userPays"][$i][0]; ?>; paysArrayIndex.value=<?php echo $i; ?>">
+                                                Editar
                                             </button>
                                         </td>
                                     </tr>
@@ -120,7 +129,6 @@
                     <!--                        <br>-->
                     <!--                    </div>-->
                 </fieldset>
-                </form>
             </div>
         </div>
         <div class="clear"></div>
