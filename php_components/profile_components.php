@@ -73,7 +73,9 @@
                         </p>
                     </div>
                     <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
-                        <br>
+                    <button href="edit-data.php" type="getnow" name="subscribe"
+                                                    class="btn btn-primary btn-lg">Editar</button>    
+                    <br>
                     </div>
                     <div style=" margin-top:25px;  padding:5px; background-color:#65AAF0; line-height:1.4;">
                         <h4 style="margin: rigth 30px;"> Método de Pago</h4>
