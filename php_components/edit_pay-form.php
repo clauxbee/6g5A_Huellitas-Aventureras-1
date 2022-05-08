@@ -1,3 +1,11 @@
+<?php session_start();
+$payIndex = $_SESSION["userPays"][$_GET["paysArrayIndex"]][0];
+$_SESSION["editPayIndex"] = $_GET["payIndex"];
+$namePay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][1];
+$typePay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][2];
+$numberPay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][3];
+$cvvPay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][4];
+?>
 <style>
     body {
         background-image: url("../img/FondoHuellitas.png");
@@ -25,7 +33,7 @@
                 <div style=" padding:1px; background-color:#65AAF0; line-height:1.4;">
                     <br>
                 </div>
-                <img src="img/iconCard.jpg" width="500" height="220">
+                <img style="width: 100%;" src="img/iconCard.png" width="500" height="220">
 
                 <div style=" padding:1px; background-color:#65AAF0; line-height:2.5;">
                     <br></div>
@@ -36,8 +44,8 @@
                 <p>Datos de tu método de pago:</p>
 
                 <form id="main-contact-form" class="contact-form" name="editPayForm" method="get"
-                      action="../controlador/pay_edit_controller.php">
-                    <input type="hidden" name="userID" value="<?php echo $_SESSION["userID"]?>">
+                      action="../controlador/payment_edit_controller.php">
+                    <input type="hidden" name="userID" value="<?php echo $_SESSION["userID"] ?>">
 
                     <div class="form-group">
                         <p>
@@ -67,15 +75,21 @@
                         </p>
                     </div>
 
-                </div>
-                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
-                  <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required"  onclick="editPetForm.action='../controlador/pet_delete_controller.php';">Eliminar</button>
-            <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required" onclick="editPetForm.action='../profile.php';">Cancelar</button>
-                </div>
-
-
+            </div>
+            <div style="text-align: right;">
+            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Confirmar</button>
+            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required"
+                    onclick="editPayForm.action='../controlador/payment_delete_controller.php';">Eliminar
+            </button>
+            <button type="getnow" name="cancel" class="btn btn-primary btn-lg" required="required"
+                    onclick="editPayForm.action='../profile.php';">Cancelar
+            </button>
             </div>
         </div>
+
+
+    </div>
+    </div>
 
 
     </div>

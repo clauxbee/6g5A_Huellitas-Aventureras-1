@@ -84,7 +84,11 @@ class MetodoPago
 
             if ($arrRS != null) {
                 foreach ($arrRS as $rowPay) {
-                    $lastIndex++;
+                    if ($rowPay[0] != 1) {
+                        $lastIndex = $rowPay[0];
+                    } else {
+                        $lastIndex++;
+                    }
                 }
             }
         }
@@ -99,13 +103,13 @@ class MetodoPago
         $query = "";
         $arrRS = null;
 
-        if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
+        if ($this->getTitular() == "" || $this->sNumero == "" || $this->sCVV == "") {
             throw new Exception("Usuario->buscar: faltan datos");
         } else {
             $query = "UPDATE metodo_pago SET
                       ID_Metodo = " . $this->sIdMetodo . ",
                       Titular = '" . $this->sTitular . "',
-                      Tipo_Producto = " . $this->sTipoProducto . ",
+                      Tipo_Producto = '" . $this->sTipoProducto . "',
                       Numero = '" . $this->sNumero . "',
                       CVV = '" . $this->sCVV . "',
                       ID_Usuario = " . $this->sIdUsuario . "
@@ -134,12 +138,12 @@ class MetodoPago
         $query = "";
         $arrRS = null;
 
-        if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
+        if ($this->getTitular() == "" || $this->sNumero == "" || $this->sCVV == "") {
             throw new Exception("Usuario->buscar: faltan datos");
         } else {
             $query = "DELETE FROM metodo_pago
                       WHERE ID_Usuario=" . $this->sIdUsuario . "
-                      AND ID_Mascotas = " . $this->sIdMetodo . "";
+                      AND ID_Metodo = " . $this->sIdMetodo . "";
 
             echo $query;
 
@@ -163,11 +167,11 @@ class MetodoPago
         $query = "";
         $arrRS = null;
 
-        if ($this->sNombre == "" || $this->sEdad == "" || $this->sRaza == "") {
+        if ($this->getTitular() == "" || $this->sNumero == "" || $this->sCVV == "") {
             throw new Exception("Usuario->buscar: faltan datos");
         } else {
             $query = "INSERT INTO metodo_pago(ID_Metodo, Titular, Tipo_Producto, Numero, CVV, ID_Usuario)
-                      VALUES(" . $this->sIdMetodo . ", '" . $this->sTitular . "', " . $this->sTipoProducto . ", '" . $this->sNumero . "', '" . $this->sCVV . "', " . $this->sIdUsuario . ")";
+                      VALUES(" . $this->sIdMetodo . ", '" . $this->sTitular . "', '" . $this->sTipoProducto . "', '" . $this->sNumero . "', '" . $this->sCVV . "', " . $this->sIdUsuario . ")";
 
             echo $query;
 

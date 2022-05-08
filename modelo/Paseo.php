@@ -6,7 +6,7 @@ class Paseo{
    protected $sHora="";
    protected $sIdPaseo=0;
    protected $sIdUsuario=0;
-   protected $sIdMascota=0;
+   protected $sMascota=0;
    protected $sIdPaseador=0;
    
      function setDuracion($psDuracion){
@@ -45,10 +45,10 @@ class Paseo{
      }
 
      function setIdMascota($psIdMascota){
-        $this->sIdMascota = $psIdMascota;
+        $this->sMascota = $psIdMascota;
      }
      function getIdMascota(){
-        return $this->sIdMascota;
+        return $this->sMascota;
      }
 
      function setIdPaseador($psIdPaseador){
@@ -57,5 +57,60 @@ class Paseo{
      function getIdPaseador(){
         return $this->sIdPaseador;
      }
+
+    public function findAllPays()
+    {
+        $db = new accesoBD();
+        $query = "";
+        $arrRS = null;
+        $lastIndex = 0;
+
+        if ($db->connect()) {
+            $query = "SELECT * FROM paseo";
+
+            $arrRS = $db->execQuery($query);
+            $db->disconnect();
+
+            if ($arrRS != null) {
+                foreach ($arrRS as $rowPay) {
+                    if ($rowPay[0] != 1) {
+                        $lastIndex = $rowPay[0];
+                    } else {
+                        $lastIndex++;
+                    }
+                }
+            }
+        }
+
+        $_SESSION["lastRideIndex"] = $lastIndex;
+    }
+
+    public function requestRide()
+    {
+        $db = new accesoBD();
+        $registered = false;
+        $query = "";
+        $arrRS = null;
+
+        if ($this->sHora == "" || $this->sEstado == "" || $this->sDuracion == "") {
+            throw new Exception("Usuario->buscar: faltan datos");
+        } else {
+            $query = "INSERT INTO paseo(ID_Paseo, Duracion, Estado, Hora_Solicitud, ID_Usuario, Mascota)
+                      VALUES(" . $this->sIdPaseo . ", " . $this->sDuracion . ", '" . $this->sEstado . "', '" . $this->sHora . "', " . $this->sIdUsuario . ", '" . $this->sMascota . "')";
+
+            echo $query;
+
+            if ($db->connect()) {
+                $arrRS = $db->execCommand($query);
+                $db->disconnect();
+
+                if ($arrRS != null) {
+                    $registered = true;
+                }
+            }
+        }
+
+        return $registered;
+    }
 }
 ?>

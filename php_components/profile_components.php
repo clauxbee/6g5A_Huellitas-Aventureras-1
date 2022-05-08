@@ -89,7 +89,7 @@
                                 $pets = $_SESSION["userPays"];
                                 for ($i = 0; $i < sizeof($_SESSION["userPays"]); $i++) { ?>
                                     <tr>
-                                        <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPays"][$i][1]; ?> </p></td>
+                                        <td style="padding-top: 1.5em"><p> <?php echo $_SESSION["userPays"][$i][2]; ?>. <?php echo $_SESSION["userPays"][$i][3]; ?> </p></td>
                                         <td style="text-align: right">
                                             <button href="inicio.html" type="getnow" name="subscribe"
                                                     class="btn btn-primary btn-lg" required="required" onclick="payIndex.value=<?php echo $_SESSION["userPays"][$i][0]; ?>; paysArrayIndex.value=<?php echo $i; ?>">Editar

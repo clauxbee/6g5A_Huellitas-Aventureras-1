@@ -75,7 +75,11 @@ class Mascota
 
             if ($arrRS != null) {
                 foreach ($arrRS as $rowPet) {
-                    $lastIndex++;
+                    if ($rowPet[0] != 1) {
+                        $lastIndex = $rowPet[0];
+                    } else {
+                        $lastIndex++;
+                    }
                 }
             }
         }

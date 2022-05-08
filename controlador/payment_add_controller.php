@@ -12,7 +12,7 @@ $payTitular = "";
 $payTipo = 0;
 $payNumero = "";
 $payCVV = "";
-$payIndex = $_SESSION["lastPetIndex"] + 1;
+$payIndex = $_SESSION["lastPayIndex"] + 1;
 echo $payIndex;
 
 if (isset($_GET["namePay"]) && !empty($_GET["namePay"]) &&
@@ -28,7 +28,7 @@ if (isset($_GET["namePay"]) && !empty($_GET["namePay"]) &&
     $pay->setTitular($payTitular);
     $pay->setTipoProducto($payTipo);
     $pay->setNumero($payNumero);
-    $pay->setCVV($payNumero);
+    $pay->setCVV($payCVV);
     $pay->setIdMetodo($payIndex);
     $pay->setIdUsuario($userID);
 
