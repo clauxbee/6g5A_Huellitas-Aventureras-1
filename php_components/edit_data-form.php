@@ -21,7 +21,7 @@ if ($_SESSION["validUserUpdate"] == "false") {
 <section class="contact-page">
     <div class="container">
         <div class="text-center">
-            <h2 class="title">Edita los datos para tu forma de pago</h2>
+            <h2 class="title">Edita tus datos personales</h2>
 
         </div>
         <div class="row contact-wrap">
