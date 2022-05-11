@@ -12,7 +12,7 @@ $payTitular = "";
 $payTipo = 0;
 $payNumero = "";
 $payCVV = "";
-$payIndex = $_SESSION["lastPetIndex"] + 1;
+$payIndex = $_SESSION["editPayIndex"];
 echo $payIndex;
 
 if (isset($_GET["namePay"]) && !empty($_GET["namePay"]) &&
