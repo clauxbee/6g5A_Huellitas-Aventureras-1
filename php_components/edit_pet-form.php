@@ -44,7 +44,7 @@ $petRace = $_SESSION["userPets"][$_GET["petsArrayIndex"]][3];
                 <p>Datos de tu peludito:</p>
 
                 <form id="main-contact-form" class="contact-form" name="editPetForm" method="get"
-                      action="../controlador/pet_edit_controller.php">
+                      action="../controlador/pet_edit_controller.php" onsubmit="return confirm('¿Desea eliminar: '+namePet.value+'?');">
                     <input type="hidden" name="userID" value="<?php echo $_SESSION["userID"]?>">
 
                     <div class="form-group">

@@ -44,7 +44,7 @@ $cvvPay = $_SESSION["userPays"][$_GET["paysArrayIndex"]][4];
                 <p>Datos de tu método de pago:</p>
 
                 <form id="main-contact-form" class="contact-form" name="editPayForm" method="get"
-                      action="../controlador/payment_edit_controller.php">
+                      action="../controlador/payment_edit_controller.php" onsubmit="return confirm('¿Desea eliminar: \n'+typePay.value+': '+numberPay.value+'?');">
                     <input type="hidden" name="userID" value="<?php echo $_SESSION["userID"] ?>">
 
                     <div class="form-group">
