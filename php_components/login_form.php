@@ -1,4 +1,11 @@
-
+<?php
+if ($_SESSION["LoginError"]=="true") {
+    echo "<div class='col-md-12' style='padding:20px; background-color:#A33D3D; line-height:1; color: white; font-weight: bold;'>".
+            $_SESSION["LoginErrorString"]
+          ."</div>";
+    $_SESSION["LoginError"]="false";
+}
+?>
 <div class="main">
 <div class="container">
     
