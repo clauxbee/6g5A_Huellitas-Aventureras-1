@@ -46,5 +46,10 @@ if ($error == "") {
     echo "<br>";
     var_dump($user);
     header("Location: ../index.php");
+} else {
+    echo $error;
+    $_SESSION["LoginError"] = "true";
+    $_SESSION["LoginErrorString"] = $error;
+    header("Location: ../login.php");
 }
 ?>
